@@ -25,10 +25,10 @@
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Price</th>
                     <th>Description</th>
+                    <th>Price</th>
                     <th>Stock</th>
-                    <th>Status</th>
+                    <th width="150">Status</th>
                     <th width="150">Actions</th>
                 </tr>
             </thead>
@@ -37,8 +37,8 @@
                     <tr>
                         <td>{{ $products->firstItem() + $index }}</td>
                         <td>{{ $product->name }}</td>
-                        <td>{{ $product->price }}</td>
                         <td>{{ $product->description }}</td>
+                        <td>{{ number_format($product->price, 2, ',', '.') }}</td>
                         <td>{{ $product->stock }}</td>
                         <td>
                             @if ($product->deleted_at)

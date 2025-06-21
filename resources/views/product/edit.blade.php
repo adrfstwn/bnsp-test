@@ -17,7 +17,7 @@
             <div class="mb-3">
                 <label for="price" class="form-label">Price</label>
                 <input type="number" name="price" class="form-control @error('price') is-invalid @enderror"
-                    value="{{ old('price', $data->price) }}" min="1" required>
+                    value="{{ old('price', (int) $data->price) }}" min="1" step="1" required>
                 @error('price')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
