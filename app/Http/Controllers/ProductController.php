@@ -11,7 +11,11 @@ class ProductController extends Controller
 {
     public function index(Request $request)
     {
-        $products = Product::filter($request)->paginate(10);
+        $query = Product::withTrashed();
+
+        $products = $query->filter($request)->paginate(10);
+
+        // $products = Product::filter($request)->paginate(10);
 
         return view('product.list', compact('products'));
     }
@@ -71,4 +75,11 @@ class ProductController extends Controller
         return $pdf->download('product.pdf');
     }
 
+    public function restore($id)
+    {
+        $product = Product::withTrashed()->findOrFail($id);
+        $product->restore();
+
+        return redirect()->route('product.index')->with('success', 'Product restored!');
+    }
 }
