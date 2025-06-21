@@ -14,4 +14,4 @@ Route::get('/product/{id}', [ProductController::class, 'edit'])->name('product.e
 Route::put('/product/{id}', [ProductController::class, 'update'])->name('product.update');
 Route::delete('/product/{id}', [ProductController::class, 'delete'])->name('product.delete');
 Route::get('/product/{id}/export', [ProductController::class, 'export'])->name('product.export');
-Route::get('/product/pdf', [ProductController::class, 'exportAll'])->name('product.all');
+Route::get('/export/pdf', [ProductController::class, 'exportAll'])->name('product.all');
