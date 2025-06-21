@@ -4,7 +4,10 @@
     <div class="container">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h2>Product List</h2>
-            <a href="{{ route('product.create') }}" class="btn btn-primary">Create Product</a>
+            <div class="d-flex gap-2">
+                <a href="{{ route('product.all') }}" class="btn btn-success">Export PDF</a>
+                <a href="{{ route('product.create') }}" class="btn btn-primary">Create Product</a>
+            </div>
         </div>
         <form method="GET" action="{{ route('product.index') }}" class="mb-3">
             <div class="input-group">

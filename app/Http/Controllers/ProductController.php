@@ -63,4 +63,12 @@ class ProductController extends Controller
         return $pdf->download('product_' . $product->name . '.pdf');
     }
 
+    public function exportAll()
+    {
+        $products = Product::all();
+        $pdf = Pdf::loadView('product.all-pdf', compact('products'));
+
+        return $pdf->download('product.pdf');
+    }
+
 }

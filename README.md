@@ -2,7 +2,57 @@
 
 ## 1. Manual Sheet
 
-### A. Fitur CRUD Produk
+### A. Cara Menjalankan Program
+
+1. **Clone Repository**
+
+    ```bash
+    git clone https://github.com/adrfstwn/bnsp-test.git
+    cd bnsp-test
+    ```
+
+2. **Install Dependency**
+
+    ```bash
+    composer install
+    ```
+
+3. **Copy File Environment**
+
+    ```bash
+    cp .env.example .env
+    ```
+
+4. **Generate Key**
+
+    ```bash
+    php artisan key:generate
+    ```
+
+5. **Atur Konfigurasi Database**  
+   Edit file `.env` dan sesuaikan bagian berikut:
+
+    ```
+    DB_DATABASE=nama_database
+    DB_USERNAME=username_db
+    DB_PASSWORD=password_db
+    ```
+
+6. **Migrasi Database**
+
+    ```bash
+    php artisan migrate
+    ```
+
+7. **Jalankan Server**
+    ```bash
+    php artisan serve
+    ```
+    Akses aplikasi di [http://localhost:8000](http://localhost:8000)
+
+---
+
+### B. Fitur CRUD Produk
 
 -   **Create**  
     Pengguna dapat menambah produk baru melalui tombol **Create Product** di halaman daftar produk.  
@@ -26,8 +76,9 @@
     Pengguna dapat menghapus produk dengan klik tombol **Delete** pada baris produk.  
     Data tidak langsung dihapus permanen, melainkan soft delete (kolom `deleted_at` terisi).
 
-### B. Export PDF
+### C. Export PDF
 
+-   Export PDF dapat dilakukan untuk semua produk pada tombol **Export PDF** di samping tombol **Create Product**
 -   Pada setiap baris produk terdapat tombol **Export PDF** untuk mengunduh detail produk dalam format PDF.
 -   Export PDF menggunakan library [barryvdh/laravel-dompdf](https://github.com/barryvdh/laravel-dompdf).
 
@@ -51,4 +102,4 @@
 
 -   Semua fitur CRUD dan export dapat diakses dari halaman utama produk (`/product`).
 -   Soft delete: data yang dihapus dapat dikembalikan jika diperlukan (restore).
--   Export PDF hanya menampilkan detail satu produk
+-   Export PDF dapat menampilkan semua produk atau hanya menampilkan detail satu produk
