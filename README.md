@@ -100,6 +100,6 @@
 
 **Catatan:**
 
--   Semua fitur CRUD dan export dapat diakses dari halaman utama produk (`/product`).
+-   Semua fitur CRUD dan export dapat diakses dari halaman utama.
 -   Soft delete: data yang dihapus dapat dikembalikan jika diperlukan (restore).
 -   Export PDF dapat menampilkan semua produk atau hanya menampilkan detail satu produk
