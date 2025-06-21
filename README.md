@@ -35,14 +35,15 @@
 
 ## 2. Tabel Pengujian
 
-| No  | Fitur       | Langkah Uji                                          | Data Uji                | Hasil yang Diharapkan              |
-| --- | ----------- | ---------------------------------------------------- | ----------------------- | ---------------------------------- |
-| 1   | Create      | Klik "Create Product", isi form, klik "Save"         | Name: Test, Price: 1000 | Produk baru muncul di tabel        |
-| 2   | Read/Search | Ketik nama produk di kolom search, klik "Search"     | search: Test            | Tabel hanya menampilkan produk itu |
-| 3   | Update      | Klik "Edit" pada produk, ubah data, klik "Update"    | Name: Test Updated      | Data produk berubah di tabel       |
-| 4   | Delete      | Klik "Delete" pada produk, konfirmasi                | -                       | Produk hilang dari tabel           |
-| 5   | Pagination  | Tambahkan lebih dari 10 produk, cek navigasi halaman | -                       | Navigasi halaman tampil            |
-| 6   | Export PDF  | Klik "Export PDF" pada produk                        | -                       | File PDF terunduh                  |
+| No  | Fitur                    | Langkah Uji                                          | Data Uji                | Hasil yang Diharapkan              |
+| --- | ------------------------ | ---------------------------------------------------- | ----------------------- | ---------------------------------- |
+| 1   | Create                   | Klik "Create Product", isi form, klik "Save"         | Name: Test, Price: 1000 | Produk baru muncul di tabel        |
+| 2   | Read/Search              | Ketik nama produk di kolom search, klik "Search"     | search: Test            | Tabel hanya menampilkan produk itu |
+| 3   | Update                   | Klik "Edit" pada produk, ubah data, klik "Update"    | Name: Test Updated      | Data produk berubah di tabel       |
+| 4   | Delete                   | Klik "Delete" pada produk, konfirmasi                | -                       | Produk hilang dari tabel           |
+| 5   | Pagination               | Tambahkan lebih dari 10 produk, cek navigasi halaman | -                       | Navigasi halaman tampil            |
+| 6   | Export PDF Per Product   | Klik "Export PDF" pada masing-masing produk          | -                       | File PDF terunduh                  |
+| 7   | Export PDF Semua Product | Klik "Export PDF"                                    | -                       | File PDF terunduh                  |
 
 ---
 
